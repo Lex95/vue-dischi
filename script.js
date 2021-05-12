@@ -8,7 +8,7 @@ const app = new Vue({
     computed: {
         selectedAlbums() {
             if (this.selectedGenre == "all") {
-                return this.albumList
+                return this.albumList.sort((a, b) => (a.year > b.year) ? -1 : 1)
             } else {
                 const result = [];
                 this.albumList.forEach(element => {
@@ -16,7 +16,7 @@ const app = new Vue({
                         result.push(element)
                     }
                 })
-                return result
+                return result.sort((a, b) => (a.year > b.year) ? -1 : 1)
             }
         }
     },
