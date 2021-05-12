@@ -12,7 +12,16 @@
 </head>
 <body>
     <main id="app">
-
+        <h1>Album</h1>
+        <div class=" album-container container-flex">
+            <div v-for="album in albumList" class="album container-flex">
+                <img :src="album.poster" alt="">
+                <p class="title">{{album.title}}</p>
+                <p class="author">{{album.author}}</p>
+                <p class="genre text-grey">{{album.genre}}</p>
+                <p class="year text-grey">{{album.year}}</p>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
