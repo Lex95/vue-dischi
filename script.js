@@ -11,6 +11,7 @@ const app = new Vue({
                 return this.albumList.sort((a, b) => (a.year > b.year) ? -1 : 1)
             } else {
                 const result = [];
+                // potevo usare un filter
                 this.albumList.forEach(element => {
                     if (element.genre == this.selectedGenre) {
                         result.push(element)
